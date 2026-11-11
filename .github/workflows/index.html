@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <!-- Privacy layer 2: the WebView itself may only load the app's own bundled files
+       and may only open connections to api.anthropic.com. No CDNs, fonts, analytics. -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: blob:; font-src 'self'; connect-src 'self' https://api.anthropic.com; media-src 'none'; object-src 'none'; frame-src 'none'; worker-src 'none'; manifest-src 'self'; base-uri 'none'; form-action 'none'">
+  <meta name="referrer" content="no-referrer">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0A0A0F">
+  <title>Orallexa Mobile</title>
+  <link rel="icon" href="/icon-512.png">
+</head>
+<body>
+  <header class="top"><span class="brand">ORALLEXA</span><span id="net" class="pill">offline</span></header>
+  <main id="main"></main>
+  <div id="toast" role="status"></div>
+  <nav>
+    <button data-tab="analyze">Analyze</button>
+    <button data-tab="backtest">Backtest</button>
+    <button data-tab="journal">Journal</button>
+    <button data-tab="privacy">Privacy</button>
+    <button data-tab="settings">Settings</button>
+  </nav>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>
